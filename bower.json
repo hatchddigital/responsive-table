@@ -1,0 +1,10 @@
+{
+  "name": "responsive-table",
+  "version": "0.1.2",
+  "dependencies": {
+    "requirejs": "~2.1.6",
+    "jquery": "~1.9.0",
+    "modernizr": "~2.6.2",
+    "handlebars": "git://github.com/wycats/handlebars.js.git#1.0.10"
+  }
+}

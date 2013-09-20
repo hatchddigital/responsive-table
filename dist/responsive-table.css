@@ -1,0 +1,74 @@
+.responsive-table td:last-child {
+  position: relative;
+  padding-right: 20px;
+}
+
+.responsive-table .row-detail dl {
+  margin: 0;
+}
+
+.responsive-table .row-detail dt {
+  margin: 0;
+  line-height: 1em;
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.responsive-table .row-detail dd {
+  margin: 0 0 .5em;
+  padding: 0;
+  line-height: 1em;
+  width: 70%;
+  display: inline-block;
+  padding-left: 5%;
+  vertical-align: top;
+}
+
+.state-open td {
+  border-bottom: 1px dashed #ccc;
+}
+
+.state-open td:last-child:after {
+  content: '-';
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.state-closed td:last-child:after {
+  content: '+';
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+@media screen and (min-width:960px) {
+  .row-detail {
+    display: none;
+  }
+
+  .state-open td {
+    border-bottom: 1px solid #000;
+  }
+
+  .state-open td:last-child:after {
+    display: none;
+  }
+
+  .state-closed td:last-child:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width:959px) {
+  .row-detail {
+    display: table-row;
+  }
+
+  .opt {
+    display: none;
+  }
+}
