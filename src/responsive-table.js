@@ -61,6 +61,7 @@
         this.row_headings = this.$element.find('thead th');
         this.row_cells = this.$element.find('td');
         this.dataTemplate = Handlebars.compile(
+            '<tr class="empty-row"></tr>' +
             '<tr class="row-detail">' +
                 '<td>' +
                     '<dl>' +
@@ -72,8 +73,12 @@
                 '</td>' +
             '</tr>');
         this.current = null;
-        this.$element.find('tbody tr').on('click', function () {
-            that.rowSwapCallback(this);
+        this.$element.find('tbody tr').each(function() {
+            var $row = $(this);
+            $row.find('td:not(.opt):last').addClass('last-visible');
+            $row.on('click', function () {
+                that.rowSwapCallback(this);
+            });
         });
 
         // check that number of heading columns matches row columns

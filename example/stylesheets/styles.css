@@ -53,7 +53,9 @@ tr:last-child td {
 thead th {
     border-bottom: 2px solid #000;
 }
-
+tbody tr:nth-child(2n+1) {
+  background: #f3f1f1;
+}
 /**
 * unique classes
 */
@@ -101,7 +103,7 @@ thead th {
 }
 
 @media (max-width:599px) {
-.table-container {
-width: 320px;
-}
+    .table-container {
+        width: 320px;
+    }
 }

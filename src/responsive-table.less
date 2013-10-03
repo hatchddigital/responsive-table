@@ -1,10 +1,7 @@
 .responsive-table {
-    td {
-        &:last-child {
-            position: relative;
-            padding-right: 20px;
-        }
-
+    td.last-visible {
+        position: relative;
+        padding-right: 20px;
     }
     .row-detail {
         dl {
@@ -12,6 +9,7 @@
         }
         dt {
             margin: 0;
+            padding: 0;
             line-height: 1em;
             width: 25%;
             display: inline-block;
@@ -31,7 +29,7 @@
     .state-open {
         td {
             border-bottom: 1px dashed #ccc;
-            &:last-child {
+            &.last-visible {
                 &:after {
                     content: '-';
                     display: block;
@@ -43,15 +41,13 @@
         }
     }
     .state-closed {
-        td {
-            &:last-child {
-                &:after {
-                    content: '+';
-                    display: block;
-                    position: absolute;
-                    right: 10px;
-                    top: 5px;
-                }
+        td.last-visible {
+            &:after {
+                content: '+';
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 5px;
             }
         }
     }
@@ -66,8 +62,7 @@
     }
     .state-open {
         td {
-            border-bottom: 1px solid #000;
-            &:last-child {
+            &.last-visible {
                 &:after {
                     display: none;
                 }
@@ -75,11 +70,9 @@
         }
     }
     .state-closed {
-        td {
-            &:last-child {
-                &:after {
-                    display: none;
-                }
+        td.last-visible {
+            &:after {
+                display: none;
             }
         }
     }
